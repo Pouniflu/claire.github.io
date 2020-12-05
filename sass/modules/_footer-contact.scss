@@ -1,0 +1,21 @@
+.footer-contact {
+
+    // L'ensemble du texte
+    p {
+        @include typoPoppins($txt, $regular, $white);
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            font-size: $txt / 1.4;
+        }
+
+        img {
+            margin-right: 1vh;
+        }
+    }
+
+    // Le titre
+    p:first-child {
+        @extend .footer-small-title;
+    }
+}

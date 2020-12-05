@@ -1,0 +1,281 @@
+/*
+------------------------------
+Sommaire :
+        1. Header
+            1.a. Titre
+            1.b. Div verticale avec les logos
+            1.c. Image d'accueil
+            1.d. Bouton avec la souris d'ordinateur
+        2. Main
+            2.a. Section Who We Are
+            2.b. Section What We Offer
+            2.c. Section Our Pricing
+            2.d. Section Newsletter
+        3. Footer
+------------------------------
+*/
+
+// 1. Header
+body>header {
+    @include flex(wrap, unset, unset);
+    @include background($bg-headerHome, top right);
+    height: 100vh;
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        background-size: 90%;
+    }
+    // Responsive Tablette
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+        background-size: 60%;
+    }
+
+    // 1.a. Titre
+    section {
+        width: 50%;
+        padding-top: 9%;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            @include flex(wrap, unset, unset);
+            width: unset;
+            padding-top: 35%;
+        }
+        // Responsive Tablette
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+            width: unset;
+            padding-top: 25%;
+        }
+
+        // 1.b. Div verticale avec les logos
+        div {
+            position : absolute;
+            top: 46vh;
+            left: 8vw;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+
+            // Responsive Mobile
+            @media screen and (min-width: 320px) and (max-width: 600px) {
+                display: none;
+            }
+            // Responsive Tablette
+            @media screen and (min-width: 600px) and (max-width: 1024px) {
+                top: 40vh;
+                left: unset;
+                right: 8vw;
+            }
+        }
+    }
+
+    // 1.c. Image d'accueil
+    &>img {
+        height: 67vh;
+        position: relative;
+        left: 30px;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            position: initial;
+            margin: 0 auto;
+            height: 35vh;
+            padding-top: 4vh;
+        }
+        // Responsive Tablette
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+            position: initial;
+            margin: 0 auto;
+            height: 45vh;
+            padding-top: 4vh;
+        }
+    }
+
+    // 1.d. Bouton avec la souris d'ordinateur
+    &>button {
+        position: absolute;
+        bottom: 2vw;
+        left: 94vh;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            display: none;
+        }
+        // Responsive Tablette
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+            display: none;
+        }
+    }
+}
+
+// 2. Main
+main {
+
+    // 2.a. Section Who We Are
+    section:first-child {
+        @include background($bg-WhoWeAre, top right);
+        height: 80vh;
+        padding-left: 50vw;
+        padding-top: 5vh;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            height: auto;
+            padding: 15vh 0 10vh 5vw;
+        }
+        // Responsive Tablette
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+            height: 70vh;
+        }
+        
+        header {
+            padding-top: 10vh;
+
+            // Responsive Mobile
+            @media screen and (min-width: 320px) and (max-width: 600px) {
+                padding-top: 0;
+            }
+        }
+
+        div {
+            position: absolute;
+            left: 10vw;
+
+            // Responsive Mobile
+            @media screen and (min-width: 320px) and (max-width: 600px) {
+                left: 66vw;
+                top: 110vh;
+            }
+            // Responsive Tablette
+            @media screen and (min-width: 600px) and (max-width: 1024px) {
+                left: 5vw;
+                top: 120vh;
+            }
+            
+
+            img {
+
+                // Responsive Mobile
+                @media screen and (min-width: 320px) and (max-width: 600px) {
+                    width: 24vw;
+                }
+                // Responsive Tablette
+                @media screen and (min-width: 600px) and (max-width: 1024px) {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    // 2.b. Section What We Offer
+    section:nth-of-type(2) {
+        @include background($bg-WhatWeOffer, bottom);
+        margin-bottom: 30vh;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            margin-bottom: 20vh;
+        }
+
+        // Div où il y a tous les articles
+        div {
+            @include flex(wrap, unset, space-between);
+
+            // Responsive Mobile
+            @media screen and (min-width: 320px) and (max-width: 600px) {
+                display: block;
+            }
+            // Responsive Tablette
+            @media screen and (min-width: 600px) and (max-width: 1024px) {
+                height: unset;
+            }
+        }
+        
+    }
+
+    // 2.c. Section Our Pricing
+    section:nth-of-type(3){
+        height: 80vh;
+        background-color: $lightViolet;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            height: 160vh;
+        }
+        // Responsive Tablette
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+            height: unset;
+        }
+
+        &>header {
+            padding: 7vh 0 5vh;
+        }
+
+        div {
+            @include flex(unset, unset, space-between);
+
+            // Responsive Mobile
+            @media screen and (min-width: 320px) and (max-width: 600px) {
+                display: block;
+            }
+            // Responsive Tablette
+            @media screen and (min-width: 600px) and (max-width: 1024px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    // 2.d. Section Newsletter
+    section:last-child{
+        margin-bottom: 10vh;
+        
+        &>header {
+            padding: 7vh 0 5vh;
+        }
+
+        form {
+            @include flex(unset, unset, center);
+
+            // Responsive Mobile et Tablette
+            @media screen and (min-width: 320px) and (max-width: 1024px) {
+                @include flex(unset, center, unset);
+                flex-direction: column;
+            }
+
+            input {
+                margin-right: 2vw;
+
+                // Responsive Mobile et Tablette
+                @media screen and (min-width: 320px) and (max-width: 1024px) {
+                    margin: 0 0 3vh 0;
+                }        
+            }
+        }
+    }
+}
+
+// 3. Footer
+footer {
+    @include flex(unset, flex-end, space-around);
+    @include background($bg-Footer, initial);
+    background-size: cover;
+    height: 60vh;
+    padding-bottom: 10vh;
+
+    // Responsive Mobile et Tablette
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+        background-image: none;
+        background: $gradient-blue;
+        display: block;
+        padding-bottom: 5vh;
+        height: 77vh;
+    }
+    
+
+    &>div {
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 1024px) {
+            padding-top: 3vh;
+        }
+    }
+}

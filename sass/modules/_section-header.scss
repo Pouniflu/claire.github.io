@@ -1,0 +1,27 @@
+// Défini le style de la section. % devant veut dire que ces styles ne peuvent s'utiliser qu'avec un @extend
+%section-header {
+    p {
+        @include typoLato ($smallTitle, $regular, $violet);
+    }
+}
+
+.section-header {
+
+    // La première lettre de chaque mot est en majuscule
+    &.lowercase {
+        @extend %section-header;
+        text-transform: capitalize;
+    }
+
+    // Toutes les lettres sont en majuscule
+    &.uppercase {
+        @extend %section-header;
+        text-transform: uppercase;
+    }
+
+    // Le texte est centré
+    &.center {
+        @extend %section-header;
+        text-align: center;
+    }
+}

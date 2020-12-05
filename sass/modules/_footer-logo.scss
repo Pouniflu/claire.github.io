@@ -1,0 +1,32 @@
+.footer-logo {
+    text-align: center;
+
+    p {
+        padding: 1vh 0;
+    }
+
+    // Ecriture du logo.
+    p:first-child {
+        @include typoDosis($title, $semiBold, $white);
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            font-size: $title / 1.4;
+        }
+    }
+
+    // Ecriture de la phrase juste en dessous
+    p:nth-of-type(2) {
+        @include typoPoppins($txtTitleFooter, $medium, $white);
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            font-size: $txtTitleFooter / 1.4;
+        }
+    }
+
+    // Bande de logos de réseaux sociaux
+    .footer-logo-social-networks {
+        @include flex(unset, unset, space-around);
+    }
+}

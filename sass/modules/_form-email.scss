@@ -1,0 +1,24 @@
+.form-email {
+    width: 25vw;
+    height: 5vh;
+    border: none;
+    background-color: $smoke-white;
+    padding: 1vh 1vw;
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        width: 90%;
+        padding: 2vh 2vw;
+    }
+    // Responsive Tablette
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+        width: 90%;
+        padding: 2vh 2vw;
+    }
+
+    // Texte à l'intérieur de l'input
+    &::placeholder {
+        @include typoPoppins ($txtButton, $lightgrey, $lightgrey);
+        text-transform: capitalize;
+    }
+}

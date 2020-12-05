@@ -1,0 +1,17 @@
+// Style du bouton avec l'icône de souris d'ordinateur
+
+.button-mouse {
+    padding: 25px 35px;
+    border: none;
+    background: none;
+    border-radius: 300px;
+    box-shadow: $shadow;
+
+    // Pour supprimer le carré noir quand on clique sur le bouton :
+    outline-style: none;
+
+    // Au survol du bouton
+    &:hover{
+        box-shadow: 0px 10px 20px rgba(127, 118, 249, .50);
+    }
+}

@@ -1,0 +1,10 @@
+.footer-small-title {
+    @include typoPoppins ($smallTitle, $medium, $white);
+    margin-bottom: 2vh;
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        font-size: $smallTitle / 1.4;
+        margin-bottom: 1vh;
+    }
+}

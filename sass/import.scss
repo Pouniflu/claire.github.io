@@ -1,0 +1,31 @@
+/* 
+------------------------------------------------------------------
+            IMPORT DES FICHIERS / METHODE SMACSS
+------------------------------------------------------------------          
+
+*/
+
+// Import des fichiers présents dans le dossier "utilities"
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+// Import des fichiers base et layout
+@import 'bases';
+@import 'layout';
+
+// Import des fichiers présents dans le dossier "modules"
+@import 'modules/article';
+@import 'modules/biography';
+@import 'modules/btn';
+@import 'modules/button-mouse';
+@import 'modules/footer-contact';
+@import 'modules/footer-hours';
+@import 'modules/footer-logo';
+@import 'modules/footer-quick-links';
+@import 'modules/footer-small-title';
+@import 'modules/form-email';
+@import 'modules/header-nav';
+@import 'modules/header-title';
+@import 'modules/package';
+@import 'modules/section-header-title';
+@import 'modules/section-header';

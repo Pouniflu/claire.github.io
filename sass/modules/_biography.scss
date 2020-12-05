@@ -1,0 +1,16 @@
+.biography {
+
+    // Texte dans la partie biography
+    &>p {
+        width: 82%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        @include typoPoppins($txt, $light, $black);
+
+        // Responsive Mobile et Tablette
+        @media screen and (min-width: 320px) and (max-width: 1024px) {
+            width: 100%;
+            font-size: $txt / 1.2;
+        }
+    }
+}

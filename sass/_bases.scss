@@ -1,0 +1,75 @@
+/*
+------------------------------
+Sommaire :
+        1. All
+        2. Body
+        3. Titre
+        4. Cursor
+------------------------------
+*/
+
+// 1. All
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// 2. Body
+
+body>header, main>section, footer {
+    padding: 0 15%;
+
+    // Responsive Mobile et tablette
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+        padding: 0 5%;
+    }
+}
+
+
+// 3. Titres
+
+h1 {
+    @include typoPoppins ($bigTitle, $bold, $black);
+    text-transform: uppercase;
+    line-height: 90%;
+
+    span {
+        @include typoPoppins ($title, $regular, $black);
+    }
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        font-size: $bigTitle / 1.6;
+
+        span {
+            font-size: $title / 1.6;
+        }
+    }
+}
+
+h2 {
+    @include typoPoppins ($title, $semiBold, $black);
+    text-transform: capitalize;
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        font-size: $title / 1.6;
+    }
+}
+
+h3 {
+    @include typoPoppins ($titlePrice, $regular, $black);
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        font-size: $titlePrice / 1.6;
+    }
+}
+
+// 4. Cursor
+a {
+    cursor: pointer;
+}

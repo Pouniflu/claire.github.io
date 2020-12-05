@@ -1,0 +1,47 @@
+/* 
+-------------------------------------------------------
+            Fichier regroupant les mixins
+-------------------------------------------------------
+
+    1. Typographies
+    2. Display
+    3. Background-Image
+
+*/
+
+// 1. Typographies
+@mixin typoPoppins($s, $w, $c) {
+    font-family : 'Poppins', sans-serif;
+    font-size : $s;
+    font-weight: $w;
+    color: $c;
+}
+
+@mixin typoLato($s, $w, $c) {
+    font-family: 'Lato', sans-serif;
+    font-size : $s;
+    font-weight: $w;
+    color: $c;
+}
+
+@mixin typoDosis($s, $w, $c) {
+    font-family: 'Dosis', sans-serif;
+    font-size : $s;
+    font-weight: $w;
+    color: $c;
+}
+
+// 2. Display
+@mixin flex($w, $ai, $jc) {
+    display: flex;
+    flex-wrap: $w;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+// 3. Background-Image
+@mixin background($bi, $bp) {
+    background-image: $bi;
+    background-repeat: no-repeat;
+    background-position: $bp;
+}

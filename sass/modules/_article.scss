@@ -1,0 +1,53 @@
+.article {
+    height: 40vh;
+    width: 24%;
+    margin-top: 10vh;
+    box-shadow: $shadow;
+    border-radius: 30px;
+    padding: 25px 30px;
+    box-sizing: content-box;
+    background-color: $white;
+
+    // Responsive Mobile
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        height: fit-content;
+        width: fit-content;
+    }
+    // Responsive Tablette
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+        height: fit-content;
+        width: 40%;
+    }
+
+    // Header de l'article
+    .article-header {
+        text-align: center;
+    
+        // Texte du header de l'article
+        h4 {
+            text-align: left;
+            margin: 25px 0px;
+            @include typoPoppins($titleArt, $semiBold, $black);
+            text-transform: uppercase;
+        }
+    }
+
+    // Texte de l'article
+    &>p {
+        @include typoLato($txtArt, $regular, $black);
+        line-height: 150%;
+        height: 19vh;
+
+        // Responsive Mobile
+        @media screen and (min-width: 320px) and (max-width: 600px) {
+            height: 23vh;
+        }
+    }
+
+    // Lien vers une autre page du site
+    a {
+        position: relative;
+        left: 55%;
+        font-size: $txtButton;
+    }
+}

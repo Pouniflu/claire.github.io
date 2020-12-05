@@ -1,0 +1,19 @@
+.footer-quick-links {
+
+    // L'ensemble des puces amenant à des redirections
+    ul {
+        list-style: none;
+        margin-top: 2vh;
+
+        // Liens
+        a {
+            text-decoration: none;
+            @include typoPoppins ($txt, $regular, $white);
+
+            // Responsive Mobile
+            @media screen and (min-width: 320px) and (max-width: 600px) {
+                font-size: $txt / 1.4;
+            }
+        }
+    }
+}

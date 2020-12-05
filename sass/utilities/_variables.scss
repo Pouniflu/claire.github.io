@@ -1,0 +1,60 @@
+/* 
+---------------------------------------------------------------
+            Fichier regroupant toutes les variables
+---------------------------------------------------------------
+
+    1. Couleurs et dégradé
+    2. Taille des textes
+    3. Font-weight
+    4. Images
+
+*/
+
+// 1. Couleurs et dégradé
+
+$black : #42495B;
+$grey : #7A839E;
+$lightgrey : #999999;
+$white : #FFFFFF;
+$smoke-white : #F6F7FB;
+$violet : #7E76F9;
+$lightViolet : rgba(0, 0, 255, 0.15);
+$pop-blue : #1000FF;
+$blue : #6156F9;
+$darkblue : #1A129F;
+$gradient-blue : linear-gradient(to left, $blue, $darkblue);
+$shadow : 0px 10px 20px rgba(127, 118, 249, .16);
+
+
+// 2. Taille des textes
+
+$bigTitle : 74px;
+$title : 50px;
+$logo : 40px;
+$titleNewsletter : 32px;
+$txtTitleFooter : 31px;
+$price : 30px;
+$titlePrice : 28px;
+$mediumTitle : 25px;
+$smallTitle : 20px;
+$titleArt : 18px;
+$txt : 16px;
+$txtArt : 15px;
+$txtButton : 12px;
+
+// 3. Font-weight
+
+$thin : 100;
+$light : 300;
+$regular : 400;
+$medium : 500;
+$semiBold : 600;
+$bold : 700;
+$extrabold : 900;
+
+// 4. Images
+
+$bg-headerHome: url(../img/wave.svg);
+$bg-WhoWeAre : url(../img/background-we-are.png);
+$bg-WhatWeOffer : url(../img/background-service.png);
+$bg-Footer : url(../img/footer.png);

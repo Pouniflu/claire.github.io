@@ -1,0 +1,45 @@
+// Défini le style des boutons du site par défaut. % devant veut dire que ces styles ne peuvent s'utiliser qu'avec un @extend
+%btn {
+    padding: 8px 30px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.btn {
+
+    // Style du bouton avec le fond en dégradé de bleu
+    &.blue {
+        @extend %btn;
+        @include typoPoppins($txt, $medium, $white);
+        background: $gradient-blue;
+    }
+    
+    // Style du bouton blanc avec la bordure bleue
+    &.border {
+        @extend %btn;
+        @include typoPoppins($txt, $medium, $black);
+        background-color: $white;
+        border: solid 2px $pop-blue;
+    }
+
+    // Bouton avec font-size de 16px
+    &.bigFont {
+        font-size: $txt;
+    }
+
+    // Bouton avec font-size de 12px
+    &.smallFont {
+        font-size: $txtButton;
+    }
+
+    // La première lettre de chaque mot est en majuscule
+    &.lowercase {
+        text-transform: capitalize;
+    }
+
+    // Toutes les lettres sont en majuscule
+    &.uppercase {
+        text-transform: uppercase;
+    }
+}
